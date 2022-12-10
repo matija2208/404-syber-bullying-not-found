@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zahtev za rad</title>
     <link rel="stylesheet" href="./zahtev.css">
+    <link rel="stylesheet" href="style-imgur.css">
 </head>
 <body>
     <div class="reg-box">
@@ -42,6 +43,12 @@
                     <span class="RegexWarning  hidden" id="EmptyContactWarning"> Molimo da unesete kontakt, tj. broj telefona.</span> <br>
                     <span class="RegexWarning  hidden" id="ErrorContactWarning"> Broj telefona moze sadrzati samo cifre, i to 10 njih.</span> <br>
 
+                    <label>Unesite sliku: </label>
+                      <br>
+                      <div class="dropzone">
+                        <div class="info"></div>
+                      </div>
+                      <br>
                     <input class="dugme" type='button' value="POŠALJI" id="posalji" onclick="ValidirajRegister()" /><br>
                     
                   <div class="nazad-div">
@@ -51,5 +58,8 @@
         </div>
     </div>
     <script src="regRadnik.js"></script>
+    <script src="imgur.js"></script>
+    <script src="zahtev.js"></script>
+    
 </body>
 </html>
