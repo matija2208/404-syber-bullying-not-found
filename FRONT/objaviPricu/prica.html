@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podeli svoju priču</title>
+    <link rel="stylesheet" href="./prica.css">
+</head>
+<body>
+    <div class="reg-box">
+        <div class="reg-box2">   
+                <img src="../media/logo-violet-gray.png" width="30%" height="30%">
+                <h1 class="reg-h1">PODELITE VASU PRIČU</h1>
+                <div class="linija"><br></div>
+                <form class="ref-forma" id="forma">
+                    <label for="naziv_input" class="reg-text"><u>Naziv priče:</u></label> <br>
+                    <input class="polje_unos" type='text'  id="naziv" placeholder='naziv priče' /><br>
+
+                    <label for="opis_input" class="reg-text"><u>Opis price:</u></label> <br>
+                    <textarea class="polje_unos" id="opisProblema" placeholder='Opis problema:' style="height: 90px; max-width: 80%;"></textarea><br>
+
+                    <label for="resenje_input" class="reg-text"><u>Opis resenja:</u></label> <br>
+                    <textarea class="polje_unos" id="resenjeProblema" placeholder='Opis resenja:' style="height: 90px;max-width: 80%;"></textarea><br>
+
+                    <label for="naziv_input" class="reg-text"><u>Autor priče:</u></label> <br>
+                    <input class="polje_unos" type='text'  id="autor" placeholder='Autor priče (ovo polje nije obavezno):' /><br>
+
+                    <input class="dugme" type='button' value="OBJAVI" id="objava" onclick="ValidirajRegister()" /><br>
+
+                    
+                  <div class="nazad-div">
+                    <a href="../pocetna/pocetna.html"  lass="dugme1" class="nazad">NAZAD</a>
+                  </div>
+                </form>
+        </div>
+    </div>
+    <script src=""></script>
+</body>
+</html>
