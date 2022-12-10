@@ -1,6 +1,6 @@
 body{
-    background: rgb(56,153,255);
-    background: linear-gradient(10deg, rgba(56,153,255,1) 0%, rgba(216,160,250,1) 72%);
+  background: rgb(56,153,255);
+  background: linear-gradient(10deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 72%);
     color: white;
     overflow: overlay;
     }
@@ -45,15 +45,15 @@ body{
     
     .dugme{
       border-radius: 10px;
-      padding:10px ;
+      padding:5px ;
       margin-top: 20px;
       border:1.5px solid rgb(56,153,255) ;
       color:rgb(56,153,255);
       font-size: 20px;
     }
     .dugme:hover{
-      color:  rgba(216,160,250,1);
-      border:1.5px solid rgba(216,160,250,1);
+      color:  rgba(160,250,181,1);
+      border:1.5px solid rgba(160,250,181,1);
     }
     .nazad-div{
       padding-left:10%;
@@ -67,8 +67,25 @@ body{
       font-size: 20px;
     }
     .nazad:hover{
-      color:  rgba(216,160,250,1);
+      color: rgba(160,250,181,1);
     }
+    
+    body::-webkit-scrollbar {
+      width: 13px;         
+      background-color: transparent;    
+    }
+    
+    body::-webkit-scrollbar-track {
+      background: rgb(217, 189, 255); 
+      background-color: transparent;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+      background-color: rgb(87, 118, 229); 
+      border-radius: 20px; 
+      border: 5px solid transparent; 
+      border-right: 6px solid transparent; 
+    } 
 
     
     @media(max-width:900px){
@@ -87,8 +104,6 @@ body{
     
         font-weight: bold;
       }
-    
-    
       .linija{
         width: 70%;
         height: 2px;
@@ -96,23 +111,6 @@ body{
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
-        background: rgb(203, 163, 255);
+        background: rgb(56,153,255);
+       
       }
-
-          /* ------------------------------------------------------------------------------------ */
-    body::-webkit-scrollbar {
-        width: 13px;         
-        background-color: transparent;    
-      }
-      
-      body::-webkit-scrollbar-track {
-        background: rgb(217, 189, 255); 
-        background-color: transparent;
-      }
-      
-      body::-webkit-scrollbar-thumb {
-        background-color: rgb(87, 118, 229); 
-        border-radius: 20px; 
-        border: 5px solid transparent; 
-        border-right: 6px solid transparent; 
-      } 
