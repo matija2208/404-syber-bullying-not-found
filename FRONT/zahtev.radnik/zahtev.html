@@ -17,7 +17,8 @@
                     <!-- IME I PRE-->
                     <label for="ime_input" class="reg-text"><u>Ime i prezime:</u></label> <br>
                     <input class="polje_unos"type='text' id="ime_input" placeholder='Ime i prezime:'  /><br>
-                    <span class="RegexWarning hidden" id="ErrorImeWarning"> Pogrešan unos.</span> <br> <br> <br>
+                    <span class="RegexWarning hidden" id="ErrorImeWarning"> Pogrešan unos.</span> <br>
+                    <span class="RegexWarning hidden" id="EmptyImeWarning"> Molimo vas da unesete ime i prezime.</span> <br> <br>
                     <!-- MAIL-->
                     <label for="mail_input" class="reg-text"><u>E-mail adresa:</u></label> <br>
                     <input class="polje_unos"type='text' id="mail_input" placeholder='Email:'  /><br>
@@ -37,17 +38,18 @@
 
                     <!-- KONTAKT-->
                     <label for="kontakt_input" class="reg-text"><u>Kontakt:</u></label> <br>
-                    <input class="polje_unos"type='text' id="kontakt_input" placeholder='kontakt:'  /><br>
+                    <input class="polje_unos"type='text' id="kontakt_input" placeholder='Broj telefona:'  /><br>
+                    <span class="RegexWarning  hidden" id="EmptyContactWarning"> Molimo da unesete kontakt, tj. broj telefona.</span> <br>
+                    <span class="RegexWarning  hidden" id="ErrorContactWarning"> Broj telefona moze sadrzati samo cifre, i to 10 njih.</span> <br>
 
                     <input class="dugme" type='button' value="POŠALJI" id="posalji" onclick="ValidirajRegister()" /><br>
                     
                   <div class="nazad-div">
-                    <a href="../pocetna/pocetna.html"  lass="dugme1" class="nazad">NAZAD</a>
+                    <a href="../pocetna/pocetna.html"  lass="dugme1" class="nazad">🡸 NAZAD</a>
                   </div>
                 </form>
         </div>
     </div>
-    <script src=""></script>
-    <script src=""></script>
+    <script src="regRadnik.js"></script>
 </body>
 </html>
