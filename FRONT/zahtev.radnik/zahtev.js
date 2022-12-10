@@ -1,5 +1,6 @@
-var SLIKA; 
-
+var SLIKA=""; 
+var realWidth;
+var realHeight;
 function reportInfo(vars, showType = false) {
     if (showType === true); //console.log(typeof vars);
     //console.log(vars);
@@ -22,9 +23,13 @@ var feedback = function(res) {
         document.querySelector('.status').classList.add('bg-success');
         var content =
             'Image : ' + '<br><input class="image-url" value=\"' + get_link + '\"/>' 
-             + '<img class="img" alt="Imgur-Upload" src=\"' + get_link + '\"/>';
+             + '<img class="img" alt="Imgur-Upload" id="slika" src=\"' + get_link + '\"/>';
         addImg('.status', content);
         SLIKA = get_link;
+        realWidth = document.querySelector("#slika").offserWidth;
+        realHeight = document.querySelector("#slika").offsetHeight;
+        document.querySelectorAll('.dropzone').ubacena = 'da';
+        console.log(realWidth + ', ' + realHeight);
     }
 };
 

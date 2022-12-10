@@ -43,13 +43,15 @@
                     <span class="RegexWarning  hidden" id="EmptyContactWarning"> Molimo da unesete kontakt, tj. broj telefona.</span> <br>
                     <span class="RegexWarning  hidden" id="ErrorContactWarning"> Broj telefona moze sadrzati samo cifre, i to 10 njih.</span> <br>
 
-                    <label>Unesite sliku: </label>
+                    <label>Unesite Vašu profilnu sliku: </label>
                       <br>
-                      <div class="dropzone">
+                      <div class="dropzone" ubacena="ne">
                         <div class="info"></div>
                       </div>
+                      <span class="RegexWarning  hidden" id="EmptyProfileWarning"> Molimo da unesete profilnu sliku.</span> <br>
+                      <span class="RegexWarning  hidden" id="ErrorProfileWarning"> Slika mora biti formati 1:1.</span> <br>
                       <br>
-                    <input class="dugme" type='button' value="POŠALJI" id="posalji" onclick="ValidirajRegister()" /><br>
+                    <input class="dugme" type='button' value="DALJE" id="posalji" onclick="ValidirajRegister()" /><br>
                     
                   <div class="nazad-div">
                     <a href="../pocetna/pocetna.html"  lass="dugme1" class="nazad">🡸 NAZAD</a>
@@ -57,9 +59,10 @@
                 </form>
         </div>
     </div>
-    <script src="regRadnik.js"></script>
+    
     <script src="imgur.js"></script>
     <script src="zahtev.js"></script>
+    <script src="regRadnik.js"></script>
     
 </body>
 </html>

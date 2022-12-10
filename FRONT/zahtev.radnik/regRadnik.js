@@ -27,6 +27,13 @@ function everything_filled(entries){
         valid_test = false;
         document.getElementById("EmptyContactWarning").classList.remove("hidden");
     } else document.getElementById("EmptyContactWarning").classList.add("hidden");
+    
+    /**Lukaaaaaaaaaaaaa */
+    let x = document.querySelector('.dropzone').getAttribute('ubacena');
+    if(x === "ne"){
+        valid_test = false;
+        document.getElementById("EmptyProfileWarning").classList.remove("hidden");
+    } else document.getElementById("EmptyProfiletWarning").classList.add("hidden");
 }
 
 function regex_valid_ime(entries){
@@ -97,6 +104,25 @@ function regex_valid_contact(entries){
     }
 }
 
+/**Lukaaaaaaaaaaaaa */
+function regex_valid_profile(){
+    let x = document.querySelector('.dropzone').getAttribute('ubacena');
+
+    if(SLIKA === ""){
+        console.log("Please select");
+        realWidth = 1;
+        realHeight = 0;
+    }
+    
+    if(realHeight === realWidth){
+        document.getElementById("ErrorProfileWarning").classList.remove("hidden");
+        valid_test = false;
+    } else{
+        console.log("validiran profilna korisnika");
+        document.getElementById("ErrorProfileWarning").classList.add("hidden");
+    }
+}
+
 ////
 function ValidirajRegister(){
     valid_test = true;
@@ -107,7 +133,10 @@ function ValidirajRegister(){
     regex_valid_pass(entries);
     regex_valid_repeat(entries);
     regex_valid_contact(entries);
-    
+    regex_valid_profile();
+    if(valid_test){
+        location.href="overa.html";
+    }
 
     // if(valid_test != true){
     //     console.log("Korisnik se ne registruje")
