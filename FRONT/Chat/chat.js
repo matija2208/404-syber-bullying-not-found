@@ -1,5 +1,7 @@
-var messages = document.getElementById("leftmessages").children;
-for (var i = 0;i<messages.length;i++){
-    let h = messages[i].offsetHeight;
-    console.log(h);
+var messages = document.getElementsByClassName("message");
+
+for(var i = 0; i<messages.length;i++){
+    console.log(messages[i].offsetHeight);
+    messages[i].parentElement.style.height = (messages[i].offsetHeight.toString() + 'px');
+    console.log(messages[i].parentElement.offsetHeight);
 }
