@@ -1,0 +1,118 @@
+body{
+    background: rgb(56,153,255);
+    background: linear-gradient(10deg, rgba(56,153,255,1) 0%, rgba(216,160,250,1) 72%);
+    color: white;
+    overflow: overlay;
+    }
+    .reg-box{
+    border: 12px dashed white;
+    border-radius: 50px;
+     width: 60%;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 46px;
+     margin-bottom: 100px;
+     text-align: center;
+     padding:5px;
+    } 
+    .reg-box2{
+      background-color: white;
+      border-radius: 30px; 
+      margin:10px;
+    padding-top: 20px;
+    }
+    
+    .reg-h1{
+        font-size: 30px;
+        color: rgb(56,153,255) ;
+        margin-bottom: 30px;
+    }
+    
+    .reg-text{
+      color: rgb(56,153,255);
+      font-weight: bold;
+      float: left;
+      padding-left:10% ;
+    }
+    
+    .polje_unos{
+      width: 80%;
+      height: 30px;
+      border-radius: 10px;
+      margin : 10px;
+      border:1px solid rgb(56,153,255) ;
+    }
+    
+    .dugme{
+      border-radius: 10px;
+      padding:5px ;
+      margin-top: 20px;
+      border:1.5px solid rgb(56,153,255) ;
+      color:rgb(56,153,255);
+      font-size: 20px;
+    }
+    .dugme:hover{
+      color:  rgba(216,160,250,1);
+      border:1.5px solid rgba(216,160,250,1);
+    }
+    .nazad-div{
+      padding-left:10%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: left;
+    }
+    .nazad{
+      text-decoration: none;
+      color: rgb(56,153,255);
+      font-size: 20px;
+    }
+    .nazad:hover{
+      color:  rgba(216,160,250,1);
+    }
+    
+    body::-webkit-scrollbar {
+      width: 13px;         
+      background-color: transparent;    
+    }
+    
+    body::-webkit-scrollbar-track {
+      background: rgb(217, 189, 255); 
+      background-color: transparent;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+      background-color: rgb(87, 118, 229); 
+      border-radius: 20px; 
+      border: 5px solid transparent; 
+      border-right: 6px solid transparent; 
+    } 
+
+    
+    @media(max-width:900px){
+      .reg-box{
+        width: 85%;
+        border: 10px dashed white;
+      }
+      }
+      
+      .hidden{
+        display: none;
+      }
+    
+      .RegexWarning{
+        color: rgb(140, 74, 232) ;
+    
+        font-weight: bold;
+      }
+    
+    
+      .linija{
+        width: 70%;
+        height: 2px;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        background: rgb(203, 163, 255);
+       
+      }
