@@ -29,11 +29,12 @@ function everything_filled(entries){
     } else document.getElementById("EmptyContactWarning").classList.add("hidden");
     
     /**Lukaaaaaaaaaaaaa */
-    let x = document.querySelector('.dropzone').getAttribute('ubacena');
-    if(x === "ne"){
+    let x = document.getElementById("dropit").getAttribute('ubacena');
+    console.log(x);
+    if(x != "da"){
         valid_test = false;
         document.getElementById("EmptyProfileWarning").classList.remove("hidden");
-    } else document.getElementById("EmptyProfiletWarning").classList.add("hidden");
+    } else document.getElementById("EmptyProfileWarning").classList.add("hidden");
 }
 
 function regex_valid_ime(entries){
@@ -104,22 +105,21 @@ function regex_valid_contact(entries){
     }
 }
 
-/**Lukaaaaaaaaaaaaa */
-function regex_valid_profile(){
-    let x = document.querySelector('.dropzone').getAttribute('ubacena');
 
-    if(SLIKA === ""){
-        console.log("Please select");
-        realWidth = 1;
-        realHeight = 0;
-    }
-    
-    if(realHeight === realWidth){
+function regex_valid_profile(varA, varB) {
+    if (typeof varB !== 'undefined') {
+       if(varA == varB){
+        document.getElementById("ErrorProfileWarning").classList.add("hidden");
+       }else{
         document.getElementById("ErrorProfileWarning").classList.remove("hidden");
         valid_test = false;
-    } else{
-        console.log("validiran profilna korisnika");
-        document.getElementById("ErrorProfileWarning").classList.add("hidden");
+       }
+    } else {
+       var img = new Image();
+       img.src = varA;
+       img.onload = function() {
+        regex_valid_profile(this.width, this.height);
+       }
     }
 }
 
@@ -133,7 +133,7 @@ function ValidirajRegister(){
     regex_valid_pass(entries);
     regex_valid_repeat(entries);
     regex_valid_contact(entries);
-    regex_valid_profile();
+    regex_valid_profile(document.getElementById("slika").src);
     if(valid_test){
         location.href="overa.html";
     }

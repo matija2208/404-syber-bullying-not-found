@@ -26,10 +26,10 @@ var feedback = function(res) {
              + '<img class="img" alt="Imgur-Upload" id="slika" src=\"' + get_link + '\"/>';
         addImg('.status', content);
         SLIKA = get_link;
-        realWidth = document.querySelector("#slika").offserWidth;
-        realHeight = document.querySelector("#slika").offsetHeight;
-        document.querySelectorAll('.dropzone').ubacena = 'da';
-        console.log(realWidth + ', ' + realHeight);
+        // realWidth = document.querySelector("#slika").offsetWidth;
+        // realHeight = document.querySelector("#slika").offsetHeight;
+        document.getElementById("dropit").setAttribute("ubacena", "da")
+        // console.log(realWidth + ', ' + realHeight);
     }
 };
 

@@ -17,9 +17,10 @@
                 <form class="ref-forma" id="forma">
                     <label>Unesite Vašu profilnu sliku: </label>
                       <br>
-                      <div class="dropzone">
+                      <div class="dropzone" id="dropit" ubacena="ne">
                         <div class="info"></div>
                       </div>
+                      <span class="RegexWarning  hidden" id="EmptyProfileWarning"> Molimo da unesete sliku overene potvrde o zaposlenju u instituciji za socijalni ili pedagoski rad.</span> <br>
                       <br>
                     <input class="dugme" type='button' value="Posalji" id="posalji" onclick="ValidirajRegister()" /><br>
                     
@@ -29,7 +30,7 @@
                 </form>
         </div>
     </div>
-    <script src="regRadnik.js"></script>
+    <script src="overaJS.js"></script>
     <script src="imgur.js"></script>
     <script src="zahtev.js"></script>
     
