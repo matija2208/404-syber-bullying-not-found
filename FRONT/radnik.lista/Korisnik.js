@@ -7,7 +7,7 @@
 */
 //let poruka = (await axios.get(LINK+"/api/poruke/"+idKorisnika[i]+"/"+localStorage.getItem("key"))).data.poruke;
 
-const LINK = "http://localhost"
+
 
 async function ucitaj()
 {
