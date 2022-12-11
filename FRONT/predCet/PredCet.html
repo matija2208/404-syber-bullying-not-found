@@ -44,7 +44,7 @@
                          eveniet reiciendis quidem nihil assumenda aliquid, voluptatem quae illum voluptatum
                           vel deserunt quibusdam architecto aliquam incidunt. Vitae, tempore omnis.</p>
                           <br><br>
-                          <div class="nazad-div">
+                          <div class="nazad-div" onclick="prebaci()">
                             <a href=""  lass="dugme" class="cet">POKRENI RAZGOVOR</a>
                           </div>
                     <form class="ref-forma" id="forma">
@@ -66,7 +66,25 @@
 <!-- ----------------------------------------------------------------------------------------------------------------- -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-<script src="https://kit.fontawesome.com/b923f4bd13.js" crossorigin="anonymous"></script>
 <script src="../nav.js"></script>
+<script>
+    async function prebaci()
+    {
+        let tip = localStorage.getItem("tip");
+        let id = localStorage.getItem("key");
+        if(tip===0)
+        {
+            let idRadnika = (await axios.get("http://localhost/api/user/"+id)).data.korisnik.idRadnika;
+
+            location.href="../Chat/chat.js/"+idRadnika;
+
+        }
+        else
+        {
+            location.href = "../"
+        }
+    }
+</script>
+<script src="https://kit.fontawesome.com/b923f4bd13.js" crossorigin="anonymous"></script>
+
 </html>

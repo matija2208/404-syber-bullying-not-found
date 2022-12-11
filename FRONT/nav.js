@@ -79,9 +79,22 @@ async function ifLogedIn()
             let div = `
                 <h1 class="logboxdata">${user.email}</h1>
                 <input class="dugme" type="button" value="ODJAVI SE" onclick="OdjaviSe()"/>
+                <input class="dugme" type="button" value="KONTAKTIRAJ" onclick="DodajRadnika()"/>
             `
             document.getElementById("loginbox").innerHTML=div;
         }
+    }
+}
+
+async function DodajRadnika()
+{
+    try
+    {
+        await axios.put(LINK+"/api/user/dodajRadnika/"+localStorage.getItem("key"));
+    }
+    catch(err)
+    {
+        console.log(err.message);
     }
 }
 
