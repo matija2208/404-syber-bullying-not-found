@@ -84,3 +84,88 @@ body{
       }
  
     }
+    #loginbox{
+      width: 220px;
+      height: 160px;
+      padding: 20px;
+      background: linear-gradient(153deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 100%);
+      border-radius: 25px; 
+      float: right;
+      margin-top: 130px;
+      display: none;
+      z-index: 5;
+      position: absolute;
+      right: 20px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.425);
+    }
+    #loginbox::before{
+      display: block;
+      content: '';
+      width: 0px;
+      height: 40px;
+      border-bottom: 40px solid #52b1ec;
+      border-left: 24px solid transparent;
+      border-right: 24px solid transparent;
+      margin-top: -95px;
+      margin-left: 150px;
+    }
+    .polje_unos{
+      margin-left: 10%;
+      margin-right: 10%;
+      width: 80%;
+      height: 25px;
+      border-radius: 10px;
+      margin : 10px;
+      border:1px solid rgb(36, 183, 71) ;
+      padding: 5px;
+    }
+    @media screen and (max-width: 815px) {
+      .navbar{
+        width: 100%;
+      }
+      .navlinks{
+        float:none;
+      }
+      .navbar .navlinks a {display: none;}
+      .navbar .navlinks a.icon {
+        float: right;
+        display: block;
+      }
+      #loginbox{
+        margin-top: 50px;
+      }
+    }
+    
+    @media screen and (max-width: 815px) {
+      .navbar.responsive {position: relative;}
+      .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+    .logo img{
+      display: inline;
+      height: 60px;
+      padding-left: 20px;
+    }
+    .dugme{
+      border-radius: 10px;
+      padding:7px;
+      margin: 5px;
+      border:1.5px solid rgb(36, 183, 71) ;
+      color:rgb(36, 183, 71) ;
+      font-size: 15px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .dugme:hover{
+      color:  rgba(56,136,255,1);
+      border:1.5px solid rgba(56,136,255,1);
+    }
