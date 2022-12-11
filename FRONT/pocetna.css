@@ -38,7 +38,7 @@ body{
   .opis-sajta p{
     font-size:30px;
     margin: 30px;
-    padding-top: 35px;
+    padding-top: 30px;
   }
   .onama-kartice-div{
     width: 50%;
@@ -203,4 +203,37 @@ h2{
     font-size: 15px;
     padding: 20px;
   }
+}
+.grafik{
+  width: 90%;
+  min-width:90% ;
+  min-height: 600px;
+}
+.opis {
+  font-size: 20px;
+  }
+@media(max-width:600px)
+{
+  .grafik{
+    min-width:80% ;
+    min-height: 200px;
+  }
+  .logoo{
+     width: 80%;
+  }
+  .opis-sajta p{
+    font-size:20px;
+    margin: 30px;
+    padding-top: 30px;
+  }
+}
+@media(min-width:600px)
+{
+  .grafik{
+    min-height: 600px;
+  }
+   .logoo{
+      width: 50%;
+    }
+   
 }

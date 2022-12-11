@@ -37,18 +37,21 @@
     </div>
     <!-- ------------------------------------------------------------------------- -->
     <div class="objave">
-        <img src="./media/cyberbullyoutline.png" width="50%" >
+        <img class="logoo" src="./media/cyberbullyoutline.png" >
         <h1>Bez hrabrosti, sve ostale vrline gube smisao</h1>
         <h2>Bori se protiv nasilja</h2>
     </div>
+    <div style="width: 100%;">
+        <canvas id="myChart" class="grafik"></canvas>
+    </div>
     <!-- ----------------------------onama--------------------------------------------------------- -->
 <section id="onama">
-    <br><br><br><br>
+    <br>
     <div class="linija"></div>
     <div class="onama">
         <div class="opis-sajta">
              <h1>IDEJA SAJTA</h1>
-             <p>Dobrodošli na naš sajt! Ova veb aplikacija je napravljena sa idejom da korisnici mogu lakše pronaći muzičke događaje u njihovoj okolini, kao što su koncerti i druge manifestacije. Takođe, bendovi i izvođačke grupe mogu postaviti oglase na različitim mestima po svetu, da bi reklamirali svoje usluge onima koje su potrebne. Uživajte i u muzici sveta, sa interaktivnom planetom koja će vam proširiti muzičke vidike. Korisnici mogu napraviti nalog i krenuti sa pravljenjem objavama, ali će administratori i moderatori prvobitno odobriti taj postupak, posle popunjavanja forme.</p>
+             <p class="opis">Dobrodošli na naš sajt! Ova veb aplikacija je napravljena sa idejom da korisnici mogu lakše pronaći muzičke događaje u njihovoj okolini, kao što su koncerti i druge manifestacije. Takođe, bendovi i izvođačke grupe mogu postaviti oglase na različitim mestima po svetu, da bi reklamirali svoje usluge onima koje su potrebne. Uživajte i u muzici sveta, sa interaktivnom planetom koja će vam proširiti muzičke vidike. Korisnici mogu napraviti nalog i krenuti sa pravljenjem objavama, ali će administratori i moderatori prvobitno odobriti taj postupak, posle popunjavanja forme.</p>
         </div>
         <div class="onama-kartice-div">
     
@@ -98,6 +101,8 @@
     </footer>
 <!-- ----------------------------------------------------------------------------------------------------------------- -->
 </body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="grafikon.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://kit.fontawesome.com/b923f4bd13.js" crossorigin="anonymous"></script>
 <script src="./nav.js"></script>
