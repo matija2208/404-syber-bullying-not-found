@@ -1,5 +1,5 @@
 *, body{
-    padding: 0;
+    padding: 15;
 }
 
 
@@ -28,19 +28,20 @@ a{
 }
 .messages{
     display: inline-flex;
-    float: left;
+    width: 100%;
     margin-bottom: 10px;
 }
 .message{
     background-color: rgb(49, 224, 36);
     padding: 15px;
     max-width: 55%;
+    margin: 0px 20px 0px 20px;
     flex-wrap: wrap;
     word-wrap: break-word;
     justify-content: space-evenly;
     position: absolute;
     clear: both;
-    
+    z-index: -5;
 }
 .leftmessage{
     border-radius: 20px;
@@ -55,11 +56,14 @@ a{
 
 .input{
     position: fixed;
+
     bottom: 0;
     padding: 20px;
-    background-color: rgb(0, 255, 157);
-    width: 90vw;
-
+    padding-left: 20%;
+    background: rgb(56,153,255);
+    background: linear-gradient(10deg, rgb(56, 152, 255) 0%, rgb(160, 250, 181) 72%);
+    width: 100%;
+    z-index: 50;
 }
 .input input{
     margin: auto;
@@ -67,6 +71,10 @@ a{
     border: 0;
     height: 30px;
     padding: 5px;
+}
+.poruka{
+    border-radius: 10px;
+    width: 60% !important;
 }
 
 .input button{
@@ -79,7 +87,76 @@ a{
 .msgSection{
     margin-bottom: 70px;
 }
-
-.pure-menu-item{
+.pure-menu-list{
+   border: 0 !important;
+   padding-top: 20px !important;
+}
+.pure-menu-link{
     font-size: 20px;
+    color:rgb(2, 56, 113) !important;
+    font-weight: bold !important;
+}
+.pure-menu-link:hover{
+    background-color: rgba(143, 176, 248, 0.382) !important;
+    border-radius: 10px !important;
+
+
+}
+.pure-menu{
+    width: 200px;
+}
+.menu{
+    width: 200px !important;
+    background: rgb(56,153,255);
+    background: linear-gradient(10deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 72%) !important;
+}
+
+
+
+.footer{
+    margin-top: 100px !important;
+    background: transparent !important;
+    border-top-left-radius: 20px ;
+    border-top-right-radius: 20px ;   
+    height: 70px;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footer .social-links a{
+      color: white !important;
+      font-size: 40px;
+      margin: 10px;
+      
+  }
+  .footer .social-links{
+        position: absolute;
+        top: 100%;
+        left: 48%;
+        margin: -50px 0 0 -50px;
+        
+  }
+  .footer .social-links .fa-facebook, .footer .social-links .fa-pinterest{
+    transition-duration: 0.5s;
+  }
+  .footer .social-links .fa-instagram{
+    transition-duration: 0.5s;
+  }
+
+  .footer .social-links .fa-facebook:hover{
+      color: rgb(49, 150, 233);
+      text-shadow: 0 0 10px white;
+  }
+  .footer .social-links .fa-instagram:hover{
+    background-image: linear-gradient(210deg, rgba(129,52,175,1) 0%, rgba(221,42,123,1) 35%, rgba(245,133,41,1) 60%, rgba(254,218,119,1) 100%);
+    text-shadow: 0 0 15px white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.footer .social-links .fa-pinterest:hover{
+    color: #e60023;
+    text-shadow: 0 0 10px white;
 }

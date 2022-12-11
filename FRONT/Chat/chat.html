@@ -13,31 +13,40 @@
     <script src="https://purecss.io/js/ui.js"></script>
 </head>
 <body>
-    <header>Saradnik</header>
     <div id="layout">
         <a href="#menu" id="menuLink" class="menu-link">
             <i class="fa fa-bars"></i>
         </a>
-        <div id="menu">
+        <div id="menu" class="menu">
             <div class="pure-menu">
                 <a class="pure-menu-heading" href="...">
                    LALA
                 </a>
+                <a href="../index.html"><img src="../media/cyberbullystop.png" style=" width: 90%;"></img></a>
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="" class="pure-menu-link">Početna</a></li>
-                    <li class="pure-menu-item"><a href="" class="pure-menu-link">Simulacija</a></li>
-                    <li class="pure-menu-item"><a href="" class="pure-menu-link">Razgovor</a></li>
-                    <li class="pure-menu-item"><a href=""class="active pure-menu-link">Iskustva</a></li>
-                    <li class="pure-menu-item"><a href="#onama" class="pure-menu-link">O nama</a></li>
+                    <li class="pure-menu-item"><a href="../index.html" class="pure-menu-link">Početna</a></li>
+                    <li class="pure-menu-item"><a href="../scenario/scen.html" class="pure-menu-link">Simulacija</a></li>
+                    <li class="pure-menu-item"><a href="../Chat/chat.html" class="pure-menu-link">Razgovor</a></li>
+                    <li class="pure-menu-item"><a href="../iskustva/iskustva.html"class="active pure-menu-link">Iskustva</a></li>
+                    <li class="pure-menu-item"><a href="../index.html#onama" class="pure-menu-link">O nama</a></li>
                 </ul>
             </div>
+         <div class="drustvaene-mreze">
+                <div class="footer">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100075264743635" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/tim404.hzs/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.pinterest.com/tim404hzs/" class="pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+         </div>
         </div>
     </div>
     <section id="main">
         <section class="msgSection" id="kumZorzo">
         </section>
         <div class="input">
-            <input type="text" id="text">
+            <input class="poruka" type="text" id="text">
             <button id="posaljibutton" onclick="posalji()"><i class="fa-regular fa-paper-plane"></i></button>
         </div>
     </section>
