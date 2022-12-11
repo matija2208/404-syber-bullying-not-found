@@ -28,7 +28,7 @@ async function Ucitaj()
             <div class="messages">
                 <div class="message rightmessage">${poruke[i].text}</div>
             </div>
-            `
+            `;
         }
         else
         {
@@ -36,7 +36,7 @@ async function Ucitaj()
             <div class="messages">
                 <div class="message leftmessage">${poruke[i].text}</div>
             </div>
-            `
+            `;
         }
     }
     document.getElementById("kumZorzo").innerHTML=div;
@@ -49,20 +49,23 @@ Ucitaj();
 
 var socket = io(LINK);
 
-function posanji(){
+function posalji(){
     let text = document.getElementById("text").value;
-    // const queryString = window.location.search;
-    // const urlParams = new URLSearchParams(queryString);
-    // var receiver = urlParams.get('id');
-    socket.emit('chat message', {
-        // sender:localStorage.getItem("key"),
-        // tip:localStorage.getItem("tip"),
-        // receiver:receiver,
-        sender:"63950c36014944ff24650908",
-        tip:false,
-        receiver:"",
-        text:text        
-    });
+    if(text !== ""){
+        // const queryString = window.location.search;
+        // const urlParams = new URLSearchParams(queryString);
+        // var receiver = urlParams.get('id');
+        socket.emit('chat message', {
+            // sender:localStorage.getItem("key"),
+            // tip:localStorage.getItem("tip"),
+            // receiver:receiver,
+            sender:"63950c36014944ff24650908",
+            tip:false,
+            receiver:"",
+            text:text        
+        });
+        document.getElementById("text").value = "";
+    }
 }
 
 // socket.on(localStorage.getItem("key"), async (msg) => 

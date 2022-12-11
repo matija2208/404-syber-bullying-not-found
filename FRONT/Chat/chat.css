@@ -1,21 +1,48 @@
-*{
+*, body{
     padding: 0;
 }
+
+
+nav{
+    float: left;
+    background-color: rgb(191, 191, 250);
+    color: white;
+    
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    padding: 20px;
+}
+
+nav div{
+    background-color: blue;
+    width: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+   
+}
+
 .messages{
     display: inline-flex;
-    width: 100%;
-    background-color: rgb(197, 105, 105);
+    width: 80%;
+    float: left;
+    margin-bottom: 10px;
 }
 .message{
     background-color: rgb(49, 224, 36);
     padding: 15px;
-    margin: 0px 20px 0px 20px;
     max-width: 55%;
     flex-wrap: wrap;
     word-wrap: break-word;
     justify-content: space-evenly;
     position: absolute;
     clear: both;
+    
 }
 .leftmessage{
     border-radius: 20px;
@@ -34,12 +61,21 @@
     padding: 20px;
     background-color: rgb(0, 255, 157);
     width: 90vw;
+
 }
 .input input{
     margin: auto;
     width: 80%;
     border: 0;
     height: 30px;
+    padding: 5px;
+}
+
+.input button{
+    font-size: 30px;
+    border-radius: 15px;
+    border: 0;
+    background-color: rgba(240, 248, 255, 0);
 }
 
 .msgSection{

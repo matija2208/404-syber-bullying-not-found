@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iskustva</title>
+    <title>Simulacija</title>
     <link rel="stylesheet" href="./scenario.css">
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -13,14 +13,14 @@
     <header id="header">
         <div class="navbar" id="myTopnav">
             <span class="logo">
-                <a href="./pocetna.html"><img src="../media/cyberbullystop.png"></img></a>
+                <a href="../index.html"><img src="../media/cyberbullystop.png"></img></a>
             </span>
             <span class="navlinks">
-                <a href="" >Početna</a>
-                <a href=""class="active">Simulacija</a>
-                <a href="">Razgovor</a>
-                <a href="">Iskustva</a>
-                <a href="#onama">O nama</a>
+                <a href="../index.html" >Početna</a>
+                <a href="scen.html"class="active">Simulacija</a>
+                <a href="../predCet/PredCet.html">Razgovor</a>
+                <a href="../iskustva/iskustva.html">Iskustva</a>
+                <a href="../index.html#onama">O nama</a>
                 <a onclick="loginbox()" id = "trebaMiId">Prijavi se</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
@@ -29,8 +29,13 @@
             
           </div>
     </header>
+    <div id="loginbox" open="ne">
+        <input class="polje_unos"type='text' id="korisnickoIme_input" placeholder='Korisničko ime ili email:'  /><br>
+        <input class="polje_unos"type='password' id="pass_input" placeholder='Lozinka:'  /><br>
+        <input class="dugme" type='button' value="PRIJAVI SE" id="registracija" onclick="Login()" />
+            <a href="../Registruj se/registracija.html" class="reg-nav">Registruj se</a>
+    </div>
     <!-- ------------------------------------------- -->
-
     <div class="objave">
         <div class="reg-box">
             <div class="reg-box2">   

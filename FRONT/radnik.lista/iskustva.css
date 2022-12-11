@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    overflow: overlay;
+    font-family: sans-serif;
+}
+    .objave{
+        width: 90%;
+        padding-top: 100px;
+        display: block;
+        color:rgb(2, 56, 113) ;
+        margin-left: 5%;
+        margin-right: 5%;
+    
+    }
+    .blok{
+     width: 100%;
+    }
+
+    .div-prica1{
+        background: rgb(56,153,255);
+        background: linear-gradient(10deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 72%);
+        width:98.%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+
+  
+    .div-prica2{
+        background: rgb(56,153,255);
+        background: linear-gradient(250deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 72%);
+        width: 80%;
+        margin-left: 20%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        text-align: right;
+    }
+    .prica{
+        margin: 10px;
+    }
+    .prica h1{
+        margin-left: 10px; 
+        margin-right:  10px; ;
+    }
+    .dodajPricu{
+      display:inline-flex;
+      margin-bottom:40px;
+      width: 90%;
+      background: rgb(56,153,255);
+      background: linear-gradient(250deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 72%);
+      padding: 5%;
+      border-radius: 20px;
+    }
+    .div-text{
+      width: 65%;
+    }
+    .dugmence{
+      width: 35%;
+      text-align: center;
+      padding: 30px;
+    }
+    .dodaj{
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 40px;
+    }
+    @media (max-width: 600px) {
+      .dodajPricu{
+        display:block
+      }
+      .div-text{
+        width: 100%;
+      }
+      .dugmence{
+        width: 100%;
+        text-align: center;
+        padding:0;
+        padding-top: 30px;
+        padding-bottom: 10px;
+      }
+ 
+    }
