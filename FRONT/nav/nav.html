@@ -12,7 +12,7 @@
     <header id="header">
         <div class="navbar" id="myTopnav">
             <span class="logo">
-                <a href="./pocetna.html"><img src="../media/Logo-text-white.png"></img></a>
+                <a href="./pocetna.html"><img src="../media/cyberbullystop.png"></img></a>
             </span>
             <span class="navlinks">
                 <a href="" >Početna</a>
@@ -28,6 +28,12 @@
             
           </div>
     </header>
+    <div id="loginbox" open="ne">
+        <input class="polje_unos"type='text' id="korisnickoIme_input" placeholder='Korisničko ime ili email:'  /><br>
+        <input class="polje_unos"type='password' id="pass_input" placeholder='Lozinka:'  /><br>
+        <input class="dugme" type='button' value="PRIJAVI SE" id="registracija" onclick="Login()" />
+            <a href="../Registruj se/registracija.html" class="reg-nav">Registruj se</a>
+    </div>
     <!-- ------------------------------------------- -->
     <div class="objave">
         <div class="blok">
@@ -87,4 +93,5 @@
 </body>
 
 <script src="https://kit.fontawesome.com/b923f4bd13.js" crossorigin="anonymous"></script>
+<script src="../nav.js"></script>
 </html>
