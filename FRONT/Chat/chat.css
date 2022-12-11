@@ -185,3 +185,8 @@ a{
     padding-left: 200px;
     margin-bottom: 100px;
 }
+.ime{
+    color: white !important;
+    font-size: 20px;
+    font-weight: bold;
+}

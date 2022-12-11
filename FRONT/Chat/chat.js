@@ -176,3 +176,26 @@ socket.on(kkkk, async (mesg) =>
 //         console.log(err.message);
 //     }
 // });
+
+async function teraj()
+{
+    const tip = localStorage.getItem("tip");
+
+    if(tip==0)
+    {
+        const nadimak = (await axios.get(LINK +"/api/user/"+localStorage.getItem("key"))).data;
+        console.log(nadimak);
+        document.getElementById("dragojlo").innerHTML=nadimak;
+    }
+    else
+    {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        var receiver = urlParams.get('id');
+        const nadimak = (await axios.get(LINK +"/api/radnik/"+receiver)).data;
+        console.log(nadimak);
+        document.getElementById("dragojlo").innerHTML=nadimak;
+    }
+}
+
+//teraj();
