@@ -26,10 +26,8 @@ a{
     text-decoration: none;
    
 }
-
 .messages{
     display: inline-flex;
-    width: 80%;
     float: left;
     margin-bottom: 10px;
 }
@@ -80,4 +78,8 @@ a{
 
 .msgSection{
     margin-bottom: 70px;
+}
+
+.pure-menu-item{
+    font-size: 20px;
 }
