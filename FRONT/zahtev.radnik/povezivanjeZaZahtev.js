@@ -7,7 +7,7 @@ async function ValidirajRegister(){
     regex_valid_pass(entries);
     regex_valid_repeat(entries);
     regex_valid_contact(entries);
-    regex_valid_profile(document.getElementById("slika").src);
+   
     
 
     if(valid_test != true){
@@ -17,7 +17,7 @@ async function ValidirajRegister(){
         let email = document.getElementById("mail_input").value;
         let password = document.getElementById("pass_input").value;
         let broj_telefona = document.getElementById("kontakt_input").value;
-        let profilna = SLIKA;
+        
         
         try{
             let info = (await axios.post(LINK+"/api/radnik/register",{
@@ -26,13 +26,13 @@ async function ValidirajRegister(){
                 email:email,
                 password:password,
                 brojTelefona:broj_telefona,
-                profilna:profilna
+
             })).data;
             if(info.uspesnost)
             {
                 localStorage.setItem("key",info.id);
                 localStorage.setItem("tip",1);
-                location.href="overa.html";
+                location.href="../index.html";
             }
             else
             {

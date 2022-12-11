@@ -1,6 +1,7 @@
 
 
-const LINK ="http://localhost"
+// const LINK ="http://localhost"
+const LINK = "www.404sbnf.cf"
 
 function potrebno()
 {

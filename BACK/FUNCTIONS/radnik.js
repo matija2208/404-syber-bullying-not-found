@@ -13,7 +13,7 @@ async function post(req,res)
             password:enigma(req.body.password),
             brojTelefona:req.body.brojTelefona,
             overa:"",
-            profilna:req.body.profilna,
+            profilna:"",
             idKorisnika:[],
             overen:false,
             opis:""

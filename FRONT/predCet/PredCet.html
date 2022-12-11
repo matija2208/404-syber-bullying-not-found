@@ -33,7 +33,7 @@
         <input class="polje_unos"type='text' id="korisnickoIme_input" placeholder='Korisničko ime ili email:'  /><br>
         <input class="polje_unos"type='password' id="pass_input" placeholder='Lozinka:'  /><br>
         <input class="dugme" type='button' value="PRIJAVI SE" id="registracija" onclick="Login()" />
-            <a href="../Registruj se/registracija.html" class="reg-nav">Registruj se</a>
+            <a href="../reg.korisnik/reg.html" class="reg-nav">Registruj se</a>
     </div>
     <!-- ------------------------------------------- -->
     <div class="objave">
@@ -77,7 +77,7 @@
         if(tip==0)
         {
             console.log("a")
-            let idRadnika = (await axios.get("http://localhost/api/user/"+id)).data.korisnik.idRadnika;
+            let idRadnika = (await axios.get("www.404sbnf.cf/api/user/"+id)).data.korisnik.idRadnika;
 
             location.href="../Chat/chat.html?id="+idRadnika;
 

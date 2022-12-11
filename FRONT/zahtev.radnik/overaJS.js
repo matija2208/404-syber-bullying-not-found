@@ -1,5 +1,5 @@
 var valid_test;
-const LINK = 'http://localhost';
+const LINK = "www.404sbnf.cf"
 
 function everything_filled(entries){
     /**Lukaaaaaaaaaaaaa */

@@ -1,5 +1,5 @@
 var valid_test;
-const LINK = 'http://localhost';
+const LINK = "www.404sbnf.cf"
 
 function everything_filled(entries){
 
@@ -28,13 +28,7 @@ function everything_filled(entries){
         document.getElementById("EmptyContactWarning").classList.remove("hidden");
     } else document.getElementById("EmptyContactWarning").classList.add("hidden");
     
-    /**Lukaaaaaaaaaaaaa */
-    let x = document.getElementById("dropit").getAttribute('ubacena');
-    console.log(x);
-    if(x != "da"){
-        valid_test = false;
-        document.getElementById("EmptyProfileWarning").classList.remove("hidden");
-    } else document.getElementById("EmptyProfileWarning").classList.add("hidden");
+    
 }
 
 function regex_valid_ime(entries){
