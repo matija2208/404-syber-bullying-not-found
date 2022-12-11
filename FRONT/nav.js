@@ -1,4 +1,4 @@
-const LINK = "http://404antinasilje.cf";
+const LINK = "http://localhost";
 function loginbox(){
     if(document.getElementById("loginbox").getAttribute("open") == "da"){
         document.getElementById("loginbox").style.display="none";
@@ -97,9 +97,9 @@ async function DodajRadnika()
     try
     {
         await axios.put(LINK+"/api/user/dodajRadnika/"+localStorage.getItem("key"));
-        let idRadnika = (await axios.get("http://404antinasilje.cf/api/user/"+localStorage.getItem("key"))).data.korisnik.idRadnika;
+        let idRadnika = (await axios.get("http://localhost/api/user/"+localStorage.getItem("key"))).data.korisnik.idRadnika;
 
-            location.href="../Chat/chat.html/"+idRadnika;
+            location.href="./Chat/chat.html?id="+idRadnika;
     }
     catch(err)
     {

@@ -1,17 +1,29 @@
 
 
 // const LINK ="http://localhost"
-const LINK = "http://404antinasilje.cf";
+const LINK = "http://localhost";
 
 function potrebno()
 {
     var messages = document.getElementsByClassName("message");
 
     for(var i = 0; i<messages.length;i++){
-        console.log(messages[i].offsetHeight);
         messages[i].parentElement.style.height = (messages[i].offsetHeight.toString() + 'px');
-        console.log(messages[i].parentElement.offsetHeight);
     }
+}
+
+let sve_poruke = [];
+
+function postojiUporukama(idPoruke)
+{
+    for(let i=0;i<sve_poruke.length;i++)
+    {
+        if(sve_poruke[i]._id===idPoruke)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 async function Ucitaj()
@@ -24,33 +36,44 @@ async function Ucitaj()
     var poruke = (await axios.get(LINK + "/api/poruke/"+id+"/" + idTwo)).data.poruke;
     
     let div="";
-
+    
     for(let i=0;i<poruke.length;i++)
     {
-        if(poruke[i].sender==id)
+        if(!postojiUporukama(poruke[i]._id))
         {
-            div+=`
-        
-            <div class="messages">
-                <div class="message rightmessage">${poruke[i].text}</div>
-            </div>
-            `;
-        }
-        else
-        {
-            div+=`
-            <div class="messages">
-                <div class="message leftmessage">${poruke[i].text}</div>
-            </div>
-            `;
+            if(poruke[i].sender==id)
+            {
+                div+=`
+            
+                <div class="messages">
+                    <div class="message rightmessage">${poruke[i].text}</div>
+                </div>
+                `;
+            }
+            else
+            {
+                div+=`
+                <div class="messages">
+                    <div class="message leftmessage">${poruke[i].text}</div>
+                </div>
+                `;
+            }
+
+
         }
     }
-    document.getElementById("kumZorzo").innerHTML=div;
+    document.getElementById("kumZorzo").innerHTML+=div;
     potrebno();
     const str = document.body;
     console.log(str);
-    str.scrollTop = str.scrollHeight;
+    sve_poruke=poruke;
+    // str.scrollTop = str.scrollHeight;
 }
+
+setInterval(() => {
+Ucitaj();
+    
+}, 500);
 Ucitaj();
 
 
@@ -72,12 +95,24 @@ function posalji(){
             // receiver:"",
             text:text        
         });
+        console.log({
+            sender:localStorage.getItem("key"),
+            tip:localStorage.getItem("tip"),
+            receiver:receiver,
+            // sender:"63950c36014944ff24650908",
+            // tip:false,
+            // receiver:"",
+            text:text        
+        })
         document.getElementById("text").value = "";
     }
 }
 
-socket.on(localStorage.getItem("key"), async (mesg) => 
+const kkkk = localStorage.getItem("key")
+
+socket.on(kkkk, async (mesg) => 
 {
+    console.log(mesg);
     try{
         let id = localStorage.getItem("key");
         let div=``;

@@ -1,5 +1,5 @@
 var valid_test;
-const LINK = "http://404antinasilje.cf";
+const LINK = "http://localhost";
 
 function everything_filled(entries){
 

@@ -77,7 +77,7 @@
         if(tip==0)
         {
             console.log("a")
-            let idRadnika = (await axios.get("http://404antinasilje.cf/api/user/"+id)).data.korisnik.idRadnika;
+            let idRadnika = (await axios.get("http://localhost/api/user/"+id)).data.korisnik.idRadnika;
 
             location.href="../Chat/chat.html?id="+idRadnika;
 

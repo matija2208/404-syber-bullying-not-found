@@ -76,7 +76,7 @@ app.get("/api/poruke/:one/:two", async function(req,res){
 io.on('connection',async function(socket){
     socket.on('chat message', async (msg) => 
     {
-        console.log(msg);
+        //console.log(msg);
         try{
             let t=new poruka({
                 sender:msg.sender,
@@ -85,12 +85,16 @@ io.on('connection',async function(socket){
                 receiver:msg.receiver
             })
             let y = await t.save();
+
+            console.log("rec",msg.receiver);
+            console.log("send",msg.sender);
             socket.emit(msg.receiver, {
                 poruka:y
             });
-            socket.emit(msg.sender, {
-                poruka:y
-            });  
+            
+            // socket.emit(msg.sender, {
+            //     poruka:y
+            // });  
         }
         catch(err)
         {
