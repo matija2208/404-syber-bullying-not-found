@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iskustva</title>
+    <link rel="stylesheet" href="./scenario.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- ------------------nav---------------------- -->
+    <header id="header">
+        <div class="navbar" id="myTopnav">
+            <span class="logo">
+                <a href="./pocetna.html"><img src="../media/cyberbullystop.png"></img></a>
+            </span>
+            <span class="navlinks">
+                <a href="" >Početna</a>
+                <a href=""class="active">Simulacija</a>
+                <a href="">Razgovor</a>
+                <a href="">Iskustva</a>
+                <a href="#onama">O nama</a>
+                <a onclick="loginbox()" id = "trebaMiId">Prijavi se</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
+            </span>
+            
+          </div>
+    </header>
+    <!-- ------------------------------------------- -->
+
+    <div class="objave">
+        <div class="reg-box">
+            <div class="reg-box2">   
+                <img src="../media/cyberbullystop.png" width="30%" >
+                <div id="questionDiv" class="pitanje">Dobili ste vrlo gadne poruke preko Instagrama, korisnik naloga je nepoznat, i uspešno krije identitet.
+                   <br> Pročitali ste prvih par poruka, ali ste odmah shvatili šta se dešava.</div>
+                        <br>
+                        <div class="odgovori" id="option1Div" onclick="optionAChoose();">A - Pročitajte ostatak poruka</div>
+                        <div class="odgovori" id="option2Div" onclick="optionBChoose();">B - Odmah odgovorite, ignorišite ostale poruke</div>
+                        <div class="odgovori" id="option3Div" onclick="optionCChoose();">C - Ignorišite ostatak poruka odmah</div>
+                        <br>
+                        <div class="odgovori nema" id="finalDiv" class="hidden" onclick="reloadPage();">Pokreni ponovo</div>
+                    
+                    
+            </div>
+        </div>
+    </div>
+    <!-- ----------------------------FOOTER--------------------------------------------------------- -->
+
+<footer id="footer">
+    <div class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100075264743635" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/tim404.hzs/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.pinterest.com/tim404hzs/" class="pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+    </div>
+</footer>
+<!-- ----------------------------------------------------------------------------------------------------------------- -->
+</body>
+<script src="scenarioJs.js"></script>
+<script src="https://kit.fontawesome.com/b923f4bd13.js" crossorigin="anonymous"></script>
+</html>

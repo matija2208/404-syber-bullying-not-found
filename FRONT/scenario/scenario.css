@@ -1,0 +1,68 @@
+.hidden{
+    display: none;
+}
+
+
+.reg-box{
+    background: rgb(56,153,255);
+    background: linear-gradient(250deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 72%);
+    border-radius: 50px;
+     width: 60%;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 100px;
+     text-align: center;
+     padding:30px;
+     padding-bottom:20px ;
+     color:rgb(0, 79, 163) ;
+    } 
+    .reg-box2{
+      background-color: linear-gradient(10deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 72%);
+      border-radius: 30px; 
+      margin:10px;
+    padding-top: 20px;
+    }
+    .objave{
+        width: 90%;
+        padding-top: 120px;
+        display: block;
+        color:rgb(2, 56, 113) ;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+      .objave p {
+        font-size:25px ;
+      }
+
+      @media screen and (max-width: 850px) {
+        .reg-box{
+            width: 80%;
+        }
+        }
+
+.pitanje {
+    width: 90%;
+    font-size: 20px;
+    background: transparent;
+    border: 5px dashed white;
+    border-radius: 20px;
+    padding: 20px;
+    color:rgb(0, 79, 163) ;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.347);
+}
+.odgovori{
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.381);
+    border-radius: 5px;
+    padding: 5px;
+    transition: .4s background-color ease-in-out;
+}
+.odgovori:hover{
+    background-color: rgba(56, 152, 255, 0.437);
+    cursor: pointer;
+}
+.nema{
+    display: none;
+}

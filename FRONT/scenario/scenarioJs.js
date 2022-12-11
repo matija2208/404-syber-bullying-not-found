@@ -113,7 +113,8 @@ function reloadQuestion(){
     }else{ans3.classList.remove("hidden");}
 
     if(counter == 3){
-        document.getElementById("finalDiv").classList.remove("hidden");
+        document.getElementById("finalDiv").classList.remove("nema");
+
     }
 }
 
