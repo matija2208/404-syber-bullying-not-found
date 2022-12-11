@@ -36,7 +36,9 @@ body{
     font-size:35px;
   }
   .opis-sajta p{
-    font-size:35px;
+    font-size:30px;
+    margin: 30px;
+    padding-top: 35px;
   }
   .onama-kartice-div{
     width: 50%;
@@ -123,4 +125,82 @@ h2{
     font-weight: bold;
     font-size: 40px;
     color: rgb(112, 206, 134);
+}
+
+@media(max-width:1100px){
+  .onama{
+    display: block;
+  }
+  .opis-sajta {
+    margin: auto;
+    width:80% ;
+    border-top-right-radius: 30px;
+  }
+  .onama-kartice-div{
+    margin: auto;
+    width:100% ;
+    margin-top: 15px;
+  }
+  .kartica1{
+    height: 200px;
+  }
+  .kartica2{
+    height: 200px;
+  }
+  .text-kartica{
+    margin-top: 35px;
+  }
+  .text-kartica2{
+    margin-top: 35px;
+  }
+}  
+@media(max-width:1250px){
+  .kartica1{
+    height: 150px;
+  }
+  .kartica2{
+    height: 150px;
+  }
+  .text-kartica{
+    margin-top: 0;
+  }
+  .text-kartica2{
+    margin-top: 0;
+  }
+}
+
+@media(max-width:520px){
+  .kartica1{
+    height: 150px;
+  }
+  .kartica2{
+    height: 150px;
+  }
+  .text-kartica{
+    margin-top: 0;
+  }
+  .text-kartica2{
+    margin-top: 0;
+  }
+}
+@media(max-width:480px){
+  .kartica1{
+    height: 100px;
+    width: 90%;
+  }
+  .kartica2{
+    height: 100px;
+    width: 90%;
+  }
+  .text-kartica{
+    margin-top: 0;
+    font-size: 15px;
+    padding: 20px;
+  }
+  .text-kartica2{
+    margin-top: 0;
+    margin-top: 0;
+    font-size: 15px;
+    padding: 20px;
+  }
 }
