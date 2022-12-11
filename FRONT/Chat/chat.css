@@ -1,5 +1,7 @@
-*, body{
+ body{
     padding: 15;
+    background-image: url(../media/pattern.png);
+    z-index: 0;
 }
 
 body::-webkit-scrollbar {
