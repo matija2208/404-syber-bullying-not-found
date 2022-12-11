@@ -87,7 +87,7 @@ async function ValidirajRegister(){
 
             localStorage.setItem("key",id);
             localStorage.setItem("tip",0);
-            //location.href="../pocetna/pocetna.html"
+            location.href="../index.html";
             ////////////////////////////////////////
             /////////////////////////////////////////
         }
