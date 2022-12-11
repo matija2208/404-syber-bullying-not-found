@@ -46,7 +46,9 @@ async function Ucitaj()
     }
     document.getElementById("kumZorzo").innerHTML=div;
     potrebno();
-
+    const str = document.body;
+    console.log(str);
+    str.scrollTop = str.scrollHeight;
 }
 Ucitaj();
 

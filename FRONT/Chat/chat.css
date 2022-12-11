@@ -52,7 +52,7 @@ a{
     background-color: rgb(49, 224, 36);
     padding: 15px;
     max-width: 55%;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 20px 0px 210px;
     flex-wrap: wrap;
     word-wrap: break-word;
     justify-content: space-evenly;
@@ -177,4 +177,9 @@ a{
 .footer .social-links .fa-pinterest:hover{
     color: #e60023;
     text-shadow: 0 0 10px white;
+}
+.div-poruke{
+    float: right;
+    padding-left: 200px;
+    margin-bottom: 100px;
 }
