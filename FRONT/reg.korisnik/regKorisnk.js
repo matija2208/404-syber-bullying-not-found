@@ -77,7 +77,7 @@ async function ValidirajRegister(){
 
         let ispis = await axios.post(LINK+'/api/user/register',{
             password:password,
-            mail:mail
+            email:mail
         });
 
         if(ispis.data.uspesnost)
