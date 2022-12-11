@@ -99,7 +99,7 @@ async function DodajRadnika()
         await axios.put(LINK+"/api/user/dodajRadnika/"+localStorage.getItem("key"));
         let idRadnika = (await axios.get("http://404antinasilje.cf/api/user/"+localStorage.getItem("key"))).data.korisnik.idRadnika;
 
-            location.href="../Chat/chat.js/"+idRadnika;
+            location.href="../Chat/chat.html/"+idRadnika;
     }
     catch(err)
     {
