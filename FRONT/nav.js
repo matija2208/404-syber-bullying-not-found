@@ -56,12 +56,13 @@ function myFunction() {
 async function ifLogedIn()
 {
     let key = localStorage.getItem("key");
-    //console.log(key);
+    console.log(key);
     if(key!=null)
     {
+        console.log(key);
         let user;
-        
-        if(localStorage.getItem("tip") === 0)
+
+        if(localStorage.getItem("tip") == 0)
         {
             user = (await axios.get(LINK + '/api/user/'+key)).data.korisnik;
         }
@@ -70,7 +71,7 @@ async function ifLogedIn()
             user = (await axios.get(LINK + '/api/radnik/'+key)).data.radnik;
         }
 
-        //console.log(user);
+        console.log(user);
 
         if(user != undefined)
         {
@@ -82,8 +83,10 @@ async function ifLogedIn()
                 
             `
             let tip = localStorage.getItem("tip");
-            if(tip === 0)
+            if(tip == 0){
                 div+=`<input class="dugme" type="button" value="KONTAKTIRAJ" onclick="DodajRadnika()"/>`
+            }
+                
             document.getElementById("loginbox").innerHTML=div;
         }
     }
@@ -119,10 +122,9 @@ function OdjaviSe()
 
 async function Login()
 {
-
     var username = document.getElementById("korisnickoIme_input").value;
     var password = document.getElementById("pass_input").value;
-
+    
     let login1 = (await axios.post(LINK + '/api/user/login',{
         
         email:username,
