@@ -83,7 +83,7 @@ async function ifLogedIn()
                 
             `
             let tip = localStorage.getItem("tip");
-            if(tip == 0){
+            if(tip == 0 && user.idRadnika==""){
                 div+=`<input class="dugme" type="button" value="KONTAKTIRAJ" onclick="DodajRadnika()"/>`
             }
                 
@@ -97,6 +97,9 @@ async function DodajRadnika()
     try
     {
         await axios.put(LINK+"/api/user/dodajRadnika/"+localStorage.getItem("key"));
+        let idRadnika = (await axios.get("http://localhost/api/user/"+id)).data.korisnik.idRadnika;
+
+            location.href="../Chat/chat.js/"+idRadnika;
     }
     catch(err)
     {

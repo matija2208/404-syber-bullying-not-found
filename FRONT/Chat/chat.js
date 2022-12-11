@@ -1,3 +1,5 @@
+
+
 const LINK ="http://localhost"
 
 function potrebno()
@@ -14,8 +16,11 @@ function potrebno()
 async function Ucitaj()
 {
     let id = localStorage.getItem("key");
+    const querry = window.location.search;
+    const urlParams = new URLSearchParams(querry);
+    let idTwo = urlParams.get("id")
     //let id = "63950c36014944ff24650908"
-    var poruke = (await axios.get(LINK + "/api/poruke/"+id)).data.poruke;
+    var poruke = (await axios.get(LINK + "/api/poruke/"+id+"/" + idTwo)).data.poruke;
     
     let div="";
 
@@ -68,16 +73,19 @@ function posalji(){
     }
 }
 
-socket.on(localStorage.getItem("key"), async (msg) => 
+socket.on(localStorage.getItem("key"), async (mesg) => 
 {
     try{
         let id = localStorage.getItem("key");
+        let div=``;
+        let msg = mesg.poruka;
+        
         if(msg.sender==id)
         {
             div+=`
         
             <div class="messages">
-                <div class="message rightmessage">${poruke[i].text}</div>
+                <div class="message rightmessage">${msg.text}</div>
             </div>
             `
         }
@@ -85,15 +93,16 @@ socket.on(localStorage.getItem("key"), async (msg) =>
         {
             div+=`
             <div class="messages">
-                <div class="message leftmessage">${poruke[i].text}</div>
+                <div class="message leftmessage">${msg.text}</div>
             </div>
             `
         }
-        document.getElementById("kumZorzo").innerHTML=div;
+        document.getElementById("kumZorzo").innerHTML+=div;
+        potrebno();
     }
     catch(err)
     {
-        console.log("greska");
+        console.log(err.message);
     }
 });
 

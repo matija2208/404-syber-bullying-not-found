@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./predCet.css">
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body onload="if(localStorage.getItem('key')!=undefined){prebaci()}">
     <!-- ------------------nav---------------------- -->
     <header id="header">
         <div class="navbar" id="myTopnav">
@@ -44,8 +44,8 @@
                          eveniet reiciendis quidem nihil assumenda aliquid, voluptatem quae illum voluptatum
                           vel deserunt quibusdam architecto aliquam incidunt. Vitae, tempore omnis.</p>
                           <br><br>
-                          <div class="nazad-div" onclick="prebaci()">
-                            <a href=""  lass="dugme" class="cet">POKRENI RAZGOVOR</a>
+                          <div class="nazad-div" onclick="location.href='../regkorisnik/reg.html'">
+                            <button href=""  lass="dugme" class="cet">REGISTRUJ SE</button>
                           </div>
                     <form class="ref-forma" id="forma">
                     </form>
@@ -72,16 +72,21 @@
     {
         let tip = localStorage.getItem("tip");
         let id = localStorage.getItem("key");
-        if(tip===0)
+        console.log("abb")
+
+        if(tip==0)
         {
+            console.log("a")
             let idRadnika = (await axios.get("http://localhost/api/user/"+id)).data.korisnik.idRadnika;
 
-            location.href="../Chat/chat.js/"+idRadnika;
+            location.href="../Chat/chat.html?id="+idRadnika;
 
         }
         else
         {
-            location.href = "../radnik.lista/RadnikLista.html/"+id;
+            console.log("dsadaa")
+
+            location.href = "../radnik.lista/RadnikLista.html?id="+id;
         }
     }
 </script>
