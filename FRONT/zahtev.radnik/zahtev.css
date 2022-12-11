@@ -1,6 +1,6 @@
 body{
-    background: rgb(56,153,255);
-    background: linear-gradient(10deg, rgba(56,153,255,1) 0%, rgba(216,160,250,1) 72%);
+  background: rgb(56,153,255);
+  background: linear-gradient(10deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 72%);
     color: white;
     overflow: overlay;
     }
@@ -52,8 +52,8 @@ body{
       font-size: 20px;
     }
     .dugme:hover{
-      color:  rgba(216,160,250,1);
-      border:1.5px solid rgba(216,160,250,1);
+      color:  rgba(160,250,181,1);
+      border:1.5px solid rgba(160,250,181,1);
     }
     .nazad-div{
       padding-left:10%;
@@ -67,7 +67,7 @@ body{
       font-size: 20px;
     }
     .nazad:hover{
-      color:  rgba(216,160,250,1);
+      color: rgba(160,250,181,1);
     }
     
     body::-webkit-scrollbar {
@@ -86,36 +86,33 @@ body{
       border: 5px solid transparent; 
       border-right: 6px solid transparent; 
     } 
+      .ubaceno{
+        color: white;
+      }
 
-    
+    .linija{
+      width: 70%;
+      height: 2px;
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      background: rgb(56,153,255);
+     
+    }
+
+       
+    .hidden{
+      display: none;
+    }
+    .RegexWarning{
+      color: rgb(56,153,255) ;
+  
+      font-weight: bold;
+    }
     @media(max-width:900px){
       .reg-box{
         width: 85%;
         border: 10px dashed white;
       }
-      }
-      
-      .hidden{
-        display: none;
-      }
-    
-      .RegexWarning{
-        color: rgb(140, 74, 232) ;
-    
-        font-weight: bold;
-      }
-    
-    
-      .linija{
-        width: 70%;
-        height: 2px;
-        margin-top: 5px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 30px;
-        background: rgb(203, 163, 255);
-      }
-
-      .ubaceno{
-        color: white;
       }

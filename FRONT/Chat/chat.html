@@ -8,36 +8,25 @@
     <link rel="stylesheet" href="chat.css">
 </head>
 <body>
-    <nav></nav>
+    <header>Saradnik</header>
+    <nav>
+        <div><a href="" >Početna</a></div><br>
+        <div><a href="">Simulacija</a></div><br>
+        <div><a href="">Razgovor</a></div><br>
+        <div><a href=""class="active">Iskustva</a></div><br>
+        <div><a href="#onama">O nama</a></div>
+    </nav>
     <section>
         <section class="msgSection" id="kumZorzo">
-            
-            <div class="messages">
-                <div class="message leftmessage">Ovo je poruka saradnikadddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
-            </div>
-            <div class="messages">
-                <div class="message leftmessage">Ovo je poruka saradnikadddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
-            </div>
-            <div class="messages">
-                <div class="message leftmessage">Ovo je poruka saradnikadddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
-            </div>
-            <div class="messages">
-                <div class="message leftmessage">Ovo je poruka saradnikadddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
-            </div>
-            <div class="messages">
-                <div class="message leftmessage">Ovo je poruka saradnikadddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
-            </div>
-            <div class="messages">
-                <div class="message leftmessage">Ovo je poruka saradnikadddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
-            </div>
         </section>
         <div class="input">
             <input type="text" id="text">
-            <button id="posaljibutton" onclick="posanji()">Posalji</button>
+            <button id="posaljibutton" onclick="posalji()"><i class="fa-regular fa-paper-plane"></i></button>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script src="chat.js"></script>
+    <script src="https://kit.fontawesome.com/b923f4bd13.js" crossorigin="anonymous"></script>
 </body>
 </html>
