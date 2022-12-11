@@ -59,7 +59,7 @@ function regex_valid_repeat(entries){
 }
 
 ////
-function ValidirajRegister(){
+async function ValidirajRegister(){
     valid_test = true;
     var entries = document.getElementById("forma");
     everything_filled(entries);
@@ -69,34 +69,30 @@ function ValidirajRegister(){
     
     
 
-    // if(valid_test != true){
-    //     console.log("Korisnik se ne registruje")
-    // }else{
-    //     let imeIprezime = entries.ime_input.value;
-    //     let username = entries.korisnickoIme_input.value;
-    //     let password = entries.pass_input.value;
-    //     let mail = entries.mail_input.value;
+    if(valid_test != true){
+        console.log("Korisnik se ne registruje")
+    }else{
+        let password = entries.pass_input.value;
+        let mail = entries.mail_input.value;
 
-    //     let ispis = await axios.post(LINK+'/api/user',{
-    //         ime:imeIprezime,
-    //         prezime:"",
-    //         username:username,
-    //         password:password,
-    //         mail:mail
-    //     });
+        let ispis = await axios.post(LINK+'/api/user/register',{
+            password:password,
+            mail:mail
+        });
 
+        if(ispis.data.uspesnost)
+        {
+            console.log("Korisnik se registruje");
+            let id = ispis.data.id;
 
-    //     console.log(ispis);
-    //     if(ispis.data.uspesnost)
-    //     {
-    //         console.log("Korisnik se registruje");
-    //         let id = ispis.data.id;
-
-    //         localStorage.setItem("key",id);
-    //         location.href="../pocetna/pocetna.html"
-    //     }
+            localStorage.setItem("key",id);
+            localStorage.setItem("tip",0);
+            //location.href="../pocetna/pocetna.html"
+            ////////////////////////////////////////
+            /////////////////////////////////////////
+        }
 
         
-    // }
+    }
 }
 

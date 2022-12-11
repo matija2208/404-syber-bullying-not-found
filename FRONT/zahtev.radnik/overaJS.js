@@ -12,41 +12,33 @@ function everything_filled(entries){
 }
 
 ////
-function ValidirajRegister(){
+async function ValidirajRegister(){
     valid_test = true;
     everything_filled();
-    if(valid_test){
-        location.href="overa.html";
-    }
+    
 
-    // if(valid_test != true){
-    //     console.log("Korisnik se ne registruje")
-    // }else{
-    //     let imeIprezime = entries.ime_input.value;
-    //     let password = entries.pass_input.value;
-    //     let mail = entries.mail_input.value;
-    // todo
-
-    //     let ispis = await axios.post(LINK+'/api/user',{
-    //         ime:imeIprezime,
-    //         prezime:"",
-    //         username:username,
-    //         password:password,
-    //         mail:mail
-    //     });
-
-
-    //     console.log(ispis);
-    //     if(ispis.data.uspesnost)
-    //     {
-    //         console.log("Korisnik se registruje");
-    //         let id = ispis.data.id;
-
-    //         localStorage.setItem("key",id);
-    //         location.href="../pocetna/pocetna.html"
-    //     }
-
+    if(valid_test != true){
+        console.log("Korisnik se ne registruje")
+    }else{
+        try{
+            let info = (await axios.put(LINK+"/api/radnik/register/"+localStorage.getItem("key"),{
+                overa:SLIKA
+            })).data;
+            if(info.uspesnost)
+            {
+                localStorage.setItem("key",info.id);
+                localStorage.setItem("tip",1);
+                location.href="overa.html";
+            }
+            else
+            {
+                console.log("nece konju");
+            }
+        }catch(err)
+        {
+            console.log(err.message);
+        }
         
-    // }
+    }
 }
 
