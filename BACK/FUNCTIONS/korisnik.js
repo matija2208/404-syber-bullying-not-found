@@ -108,7 +108,7 @@ async function dodajRadnika(req,res)
 
         for(let i = 1;i<radnici.length;i++)
         {
-            if(radnici[i].idKorisnika.length<t.idKorisnika.length)
+            if(radnici[i].idKorisnika.length<t.idKorisnika.length && radnici[i].overen)
             {
                 t=radnici[i];
             }
@@ -146,7 +146,7 @@ async function promeniRadnika(req,res)
 
         for(let i = 1;i<radnici.length;i++)
         {
-            if(radnici[i].idKorisnika.length<t.idKorisnika.length && radnici[i]._id !== KORISNIK.idRadnika)
+            if(radnici[i].idKorisnika.length<t.idKorisnika.length && radnici[i]._id !== KORISNIK.idRadnika && radnici[i].overen)
             {
                 t=radnici[i];
             }

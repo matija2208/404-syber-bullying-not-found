@@ -12,7 +12,7 @@ async function post(req,res)
             email:req.body.email,
             password:enigma(req.body.password),
             brojTelefona:req.body.brojTelefona,
-            overa:req.body.overa,
+            overa:"",
             profilna:req.body.profilna,
             idKorisnika:[],
             overen:false,
@@ -173,10 +173,34 @@ async function getNeoverene(req,res)
     }
 }
 
+async function dodajOveru(req,res)
+{
+    try{
+        
+        let RADNIK = (await radnik.findById(req.params.id));
+
+        RADNIK.overa=req.body.overa;
+
+        await RADNIK.save();
+
+        res.json({
+            uspesnost:true,
+        })
+    }
+    catch(err)
+    {
+        res.json({
+            uspesnost:false,
+            poruka:err.message
+        })
+    }
+}
+
 module.exports = new Object({
     "register":post,
     "login":login,
     "get":get,
     "overi":overavanje,
-    "list":getNeoverene
+    "list":getNeoverene,
+    "dodajOveru":dodajOveru
 });

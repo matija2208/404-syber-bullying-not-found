@@ -29,8 +29,7 @@ const baza = require("./BAZA/baza");
 const korisnik=require("./FUNCTIONS/korisnik");
 const radnik=require("./FUNCTIONS/radnik");
 const poruka=require("./TEMPLATES/poruka");
-const Korisnik = require("./TEMPLATES/korisnik");
-const Radnik = require("./TEMPLATES/radnik");
+
 baza();
 
 app.get("/api/user/:id", korisnik.get);
@@ -43,8 +42,9 @@ app.put("/api/user/dodajNadimak/:id", korisnik.dodajNadimak);
 app.get("/api/radnik/:id", radnik.get);
 app.post("/api/radnik/register", radnik.register);
 app.post("/api/radnik/login",radnik.login);
-app.put("/api/radnik/:id",radnik.overi);
+app.put("/api/radnik/overi/:id",radnik.overi);
 app.get("/api/user/list", radnik.list);
+app.put("/api/radnik/dodajOveru/:id", radnik.dodajOveru);
 
 app.get("/api/poruke/:id", async function(req,res){
     try{
