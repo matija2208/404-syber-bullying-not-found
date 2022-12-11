@@ -1,5 +1,5 @@
 var valid_test;
-const LINK = "www.404sbnf.cf"
+const LINK = "http://404antinasilje.cf";
 
 function everything_filled(entries){
 

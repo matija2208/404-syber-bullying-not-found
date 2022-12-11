@@ -1,4 +1,4 @@
-const LINK = "www.404sbnf.cf"
+const LINK = "http://404antinasilje.cf";
 function loginbox(){
     if(document.getElementById("loginbox").getAttribute("open") == "da"){
         document.getElementById("loginbox").style.display="none";
@@ -97,7 +97,7 @@ async function DodajRadnika()
     try
     {
         await axios.put(LINK+"/api/user/dodajRadnika/"+localStorage.getItem("key"));
-        let idRadnika = (await axios.get("www.404sbnf.cf/api/user/"+id)).data.korisnik.idRadnika;
+        let idRadnika = (await axios.get("http://404antinasilje.cf/api/user/"+id)).data.korisnik.idRadnika;
 
             location.href="../Chat/chat.js/"+idRadnika;
     }

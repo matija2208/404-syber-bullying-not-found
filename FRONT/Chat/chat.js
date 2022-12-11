@@ -1,7 +1,7 @@
 
 
 // const LINK ="http://localhost"
-const LINK = "www.404sbnf.cf"
+const LINK = "http://404antinasilje.cf";
 
 function potrebno()
 {
