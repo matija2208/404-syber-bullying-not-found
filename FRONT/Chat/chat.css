@@ -1,5 +1,23 @@
 *, body{
     padding: 15;
+    overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+width: 13px;         
+background-color: transparent;    
+}
+
+body::-webkit-scrollbar-track {
+background: rgb(131, 177, 246); 
+background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: rgb(101, 166, 245); 
+border-radius: 20px; 
+border: 5px solid transparent; 
+border-right: 6px solid transparent; 
 }
 
 
