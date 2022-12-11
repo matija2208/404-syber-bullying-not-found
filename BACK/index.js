@@ -46,14 +46,15 @@ app.put("/api/radnik/overi/:id",radnik.overi);
 app.get("/api/user/list", radnik.list);
 app.put("/api/radnik/dodajOveru/:id", radnik.dodajOveru);
 
-app.get("/api/poruke/:id", async function(req,res){
+app.get("/api/poruke/:one/:two", async function(req,res){
     try{
         let t=[];
-        const id=req.params.id;
+        const idOne=req.params.one;
+        const idTwo=req.params.two;
         let poruke = await poruka.find();
         for(let i=0;i<poruke.length;i++)
         {
-            if(poruke[i].sender===id || poruke[i].receiver===id)
+            if((poruke[i].sender===idOne || poruke[i].receiver===idOne)&&(poruke[i].sender===idTwo || poruke[i].receiver===idTwo))
             {
                 t.push(poruke[i]);
             }
