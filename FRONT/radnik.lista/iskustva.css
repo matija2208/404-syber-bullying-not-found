@@ -16,10 +16,36 @@ body{
      width: 100%;
     }
 
+    .editbutton{
+      float: left;
+      margin-right: 10px;
+      margin-top: 3px;
+      width: 50px;
+      height: 30px;
+      line-height: 25px;
+      box-sizing: border-box;
+      border-radius: 2px;
+
+      text-align: center;
+      background-color:rgb(56,153,255);
+      font-weight: bold;
+
+      border-color: rgb(2, 56, 113) ;
+      color: rgb(2, 56, 113) ;
+
+      transition-duration: 0.4s;
+    }
+
+    .editbutton:hover {
+      background-color: rgba(160,250,181,1); /* Green */
+      color: white;
+    }
+    
+
     .div-prica1{
         background: rgb(56,153,255);
         background: linear-gradient(10deg, rgba(56,153,255,1) 0%, rgba(160,250,181,1) 72%);
-        width:98.%;
+        width:98%;
         padding: 10px;
         margin-bottom: 20px;
         border-radius: 20px;
