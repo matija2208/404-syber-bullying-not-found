@@ -79,8 +79,11 @@ async function ifLogedIn()
             let div = `
                 <h1 class="logboxdata">${user.email}</h1>
                 <input class="dugme" type="button" value="ODJAVI SE" onclick="OdjaviSe()"/>
-                <input class="dugme" type="button" value="KONTAKTIRAJ" onclick="DodajRadnika()"/>
+                
             `
+            let tip = localStorage.getItem("tip");
+            if(tip === 0)
+                div+=`<input class="dugme" type="button" value="KONTAKTIRAJ" onclick="DodajRadnika()"/>`
             document.getElementById("loginbox").innerHTML=div;
         }
     }
