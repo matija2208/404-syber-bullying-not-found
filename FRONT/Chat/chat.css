@@ -1,6 +1,5 @@
 *, body{
     padding: 15;
-    overflow: overlay;
 }
 
 body::-webkit-scrollbar {
@@ -153,6 +152,7 @@ a{
         top: 100%;
         left: 48%;
         margin: -50px 0 0 -50px;
+        height: 200px;
         
   }
   .footer .social-links .fa-facebook, .footer .social-links .fa-pinterest{
